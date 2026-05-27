@@ -26,3 +26,11 @@ class SecurityEventResponse(BaseModel):
     description: str
     timestamp: str
     resolved: bool = False
+
+
+class EventStatsResponse(BaseModel):
+    total: int
+    resolved: int
+    open: int
+    by_severity: dict[str, int]
+    by_event_type: dict[str, int]
